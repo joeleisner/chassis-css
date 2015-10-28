@@ -1,0 +1,175 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+
+/* Global */
+html {font-size:14px;}
+
+/* Typography */
+p, ul, ol h1, h2, h3, h4 {color:#303030;margin:5px 0 10px;}
+ul, ol {margin-left:30px;}
+small {font-size:.5em;}
+strong {font-weight:bold;}
+em {font-style:italic;}
+
+/* Grid */
+.container {margin:0 auto;}
+.row {width:100%;clear:both;height:auto;overflow:auto;}
+.col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {float:left;box-sizing:border-box;padding:15px;}
+.col-12 {width:100%;}
+.col-11 {width:91.6666667%;}
+.col-10 {width:83.3333333%;}
+.col-9 {width:75%;}
+.col-8 {width:66.6666667%;}
+.col-7 {width:58.3333333%;}
+.col-6 {width:50%;}
+.col-5 {width:41.6666667%;}
+.col-4 {width:33.3333333%;}
+.col-3 {width:25%;}
+.col-2 {width:16.6666667%;}
+.col-1 {width:8.3333333%;}
+
+/* Offsets */
+.offset-11 {margin-left:91.6666667%;}
+.offset-10 {margin-left:83.3333333%;}
+.offset-9 {margin-left:75%;}
+.offset-8 {margin-left:66.6666667%;}
+.offset-7 {margin-left:58.3333333%;}
+.offset-6 {margin-left:50%;}
+.offset-5 {margin-left:41.6666667%;}
+.offset-4 {margin-left:33.3333333%;}
+.offset-3 {margin-left:25%;}
+.offset-2 {margin-left:16.6666667%;}
+.offset-1 {margin-left:8.3333333%;}
+
+/* DIV Alignment */
+.pull-left {float:left;}
+.pull-right {float:right;}
+
+/* Text Alignment */
+.text-left {text-align:left;}
+.text-center {text-align:center;}
+.text-right {text-align:right;}
+.text-justify {text-align:justify;}
+
+/* List Helpers */
+.list-unstyled {list-style:none;margin-left:0;}
+.list-inline {margin-left:0;}
+.list-inline>li {display:inline-block;}
+
+/* Margin Helpers */
+.mgn-full-top {margin-top:15px;}
+.mgn-double-top {margin-top:30px;}
+.mgn-full-btm {margin-bottom:15px;}
+.mgn-double-btm {margin-bottom:30px;}
+
+/* Padding Helpers */
+.pad-full-top {padding-top:15px;}
+.pad-double-top {padding-top:30px;}
+.pad-full-btm {padding-bottom:15px;}
+.pad-double-btm {padding-bottom:30px;}
+
+/* Desktop MQ */
+@media (min-width:1200px) {
+    
+    /* Typography */
+    p, ul, ol {font-size:1em;line-height:1.375em;}
+    h1 {font-size:3em;line-height:1.05em;}
+    h2 {font-size:2.25em;line-height:1.25em;}
+    h3 {font-size:1.75em;line-height:1.25em;}
+    h4 {font-size:1.125em;line-height:1.22222222em;}
+    blockquote {font-size:1.5em;line-height:1.45833333em;}
+    
+    /* Grid */
+    .container {width:1170px;}
+    
+    /* Hide/Show Helpers */
+    .xl-show {display:block;}
+    .xl-hide {display:none;}
+    .lg-show {display:none;}
+    .lg-hide {display:block;}
+    .md-show {display:none;}
+    .md-hide {display:block;}
+    .sm-show {display:none;}
+    .sm-hide {display:block;}
+    
+}
+
+/* Medium MQ */
+@media (max-width:1199px) and (min-width:992px) {
+    
+    /* Typography */
+    p, ul, ol {font-size:1em;line-height:1.375em;}
+    h1 {font-size:2.5em;line-height:1.125em;}
+    h2 {font-size:2em;line-height:1.25em;}
+    h3 {font-size:1.5em;line-height:1.25em;}
+    h4 {font-size:1.125em;line-height:1.22222222em;}
+    blockquote {font-size:1.5em;line-height:1.45833333em;}
+    
+    /* Grid */
+    .container {width:970px;}
+    
+    /* Hide/Show Helpers */
+    .xl-show {display:none;}
+    .xl-hide {display:block;}
+    .lg-show {display:block;}
+    .lg-hide {display:none;}
+    .md-show {display:none;}
+    .md-hide {display:block;}
+    .sm-show {display:none;}
+    .sm-hide {display:block;}
+    
+}
+
+/* Small MQ */
+@media (max-width:991px) and (min-width:768px) {
+    
+    /* Typography */
+    p, ul, ol {font-size:1em;line-height:1.25em;}
+    h1 {font-size:2em;line-height:1.25em;}
+    h2 {font-size:1.625em;line-height:1.15384615em;}
+    h3 {font-size:1.375em;line-height:1.13636364em;}
+    h4 {font-size:1.125em;line-height:1.11111111em;}
+    blockquote {font-size:1.25em;line-height:1.25em;}
+    
+    /* Grid */
+    .container {width:750px;}
+    
+    /* Hide/Show Helpers */
+    .xl-show {display:none;}
+    .xl-hide {display:block;}
+    .lg-show {display:none;}
+    .lg-hide {display:block;}
+    .md-show {display:block;}
+    .md-hide {display:none;}
+    .sm-show {display:none;}
+    .sm-hide {display:block;}
+    
+}
+
+/* Extra Small MQ */
+@media (max-width:767px) {
+    
+    /* Typography */
+    p, ul, ol {font-size:1em;line-height:1.25em;}
+    h1 {font-size:2em;line-height:1.25em;}
+    h2 {font-size:1.625em;line-height:1.15384615em;}
+    h3 {font-size:1.375em;line-height:1.13636364em;}
+    h4 {font-size:1.125em;line-height:1.11111111em;}
+    blockquote {font-size:1.25em;line-height:1.25em;}
+    
+    /* Grid */
+    .container {width:100%;}
+    .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {width:100%;padding:15px 30px;}
+    .offset-11, .offset-10, .offset-9, .offset-8, .offset-7, .offset-6, .offset-5, .offset-4, .offset-3, .offset-2, .offset-1 {margin-left:0;}
+    
+    /* Hide/Show Helpers */
+    .xl-show {display:none;}
+    .xl-hide {display:block;}
+    .lg-show {display:none;}
+    .lg-hide {display:block;}
+    .md-show {display:none;}
+    .md-hide {display:block;}
+    .sm-show {display:block;}
+    .sm-hide {display:none;}
+    
+}

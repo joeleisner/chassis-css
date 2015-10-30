@@ -59,14 +59,14 @@ em {font-style:italic;}
 /* Margin Helpers */
 .mgn-full-top {margin-top:15px;}
 .mgn-double-top {margin-top:30px;}
-.mgn-full-btm {margin-bottom:15px;}
-.mgn-double-btm {margin-bottom:30px;}
+.mgn-full-btm {margin:0 0 15px;}
+.mgn-double-btm {margin:0 0 30px;}
 
 /* Padding Helpers */
 .pad-full-top {padding-top:15px;}
 .pad-double-top {padding-top:30px;}
-.pad-full-btm {padding-bottom:15px;}
-.pad-double-btm {padding-bottom:30px;}
+.pad-full-btm {padding:0 0 15px;}
+.pad-double-btm {padding:0 0 30px;}
 
 /* Desktop MQ */
 @media (min-width:1200px) {
@@ -83,14 +83,8 @@ em {font-style:italic;}
     .container {width:1170px;}
     
     /* Hide/Show Helpers */
-    .xl-show {display:block;}
-    .xl-hide {display:none;}
-    .lg-show {display:none;}
-    .lg-hide {display:block;}
-    .md-show {display:none;}
-    .md-hide {display:block;}
-    .sm-show {display:none;}
-    .sm-hide {display:block;}
+    .xl-hide, .lg-show, .md-show, .sm-show {display:none;}
+    .xl-show, .lg-hide, .md-hide, .sm-hide {display:block;}
     
 }
 
@@ -109,14 +103,8 @@ em {font-style:italic;}
     .container {width:970px;}
     
     /* Hide/Show Helpers */
-    .xl-show {display:none;}
-    .xl-hide {display:block;}
-    .lg-show {display:block;}
-    .lg-hide {display:none;}
-    .md-show {display:none;}
-    .md-hide {display:block;}
-    .sm-show {display:none;}
-    .sm-hide {display:block;}
+    .xl-show, .lg-hide, .md-show, .sm-show {display:none;}
+    .xl-hide, .lg-show, .md-hide, .sm-hide {display:block;}
     
 }
 
@@ -135,14 +123,8 @@ em {font-style:italic;}
     .container {width:750px;}
     
     /* Hide/Show Helpers */
-    .xl-show {display:none;}
-    .xl-hide {display:block;}
-    .lg-show {display:none;}
-    .lg-hide {display:block;}
-    .md-show {display:block;}
-    .md-hide {display:none;}
-    .sm-show {display:none;}
-    .sm-hide {display:block;}
+    .xl-show, .lg-show, .md-hide, .sm-show {display:none;}
+    .xl-hide, .lg-hide, .md-show, .sm-hide {display:block;}
     
 }
 
@@ -163,13 +145,7 @@ em {font-style:italic;}
     .offset-11, .offset-10, .offset-9, .offset-8, .offset-7, .offset-6, .offset-5, .offset-4, .offset-3, .offset-2, .offset-1 {margin-left:0;}
     
     /* Hide/Show Helpers */
-    .xl-show {display:none;}
-    .xl-hide {display:block;}
-    .lg-show {display:none;}
-    .lg-hide {display:block;}
-    .md-show {display:none;}
-    .md-hide {display:block;}
-    .sm-show {display:block;}
-    .sm-hide {display:none;}
+    .xl-show, .lg-show, .md-show, .sm-hide {display:none;}
+    .xl-hide, .lg-hide, .md-hide, .sm-show {display:block;}
     
 }

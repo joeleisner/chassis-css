@@ -80,7 +80,7 @@ em {font-style:italic;}
     blockquote {font-size:1.5em;line-height:1.45833333em;}
     
     /* Grid */
-    .container {width:1170px;}
+    .container {width:1200px;}
     
     /* Hide/Show Helpers */
     .xl-hide, .lg-show, .md-show, .sm-show {display:none;}
@@ -100,7 +100,8 @@ em {font-style:italic;}
     blockquote {font-size:1.5em;line-height:1.45833333em;}
     
     /* Grid */
-    .container {width:970px;}
+    .container {width:960px;}
+    .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {padding:10px;}
     
     /* Hide/Show Helpers */
     .xl-show, .lg-hide, .md-show, .sm-show {display:none;}
@@ -120,7 +121,8 @@ em {font-style:italic;}
     blockquote {font-size:1.25em;line-height:1.25em;}
     
     /* Grid */
-    .container {width:750px;}
+    .container {width:744px;}
+    .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {padding:10px;}
     
     /* Hide/Show Helpers */
     .xl-show, .lg-show, .md-hide, .sm-show {display:none;}

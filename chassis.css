@@ -41,9 +41,9 @@ em {font-style:italic;}
 .offset-2 {margin-left:16.6666667%;}
 .offset-1 {margin-left:8.3333333%;}
 
-/* DIV Alignment */
-.pull-left {float:left;}
-.pull-right {float:right;}
+/* Float Alignment */
+.float-left {float:left;}
+.float-right {float:right;}
 
 /* Text Alignment */
 .text-left {text-align:left;}

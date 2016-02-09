@@ -29,7 +29,7 @@ module.exports = function(grunt) {
                     'dist/css/chassis.min.css': 'dist/css/chassis.css'
                 }
             }
-        }
+        },
         postcss: {
             options: {
                 map: false,

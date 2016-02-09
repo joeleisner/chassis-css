@@ -1,0 +1,9 @@
+// Calculate Grid Width
+=grid-col($num)
+    width: ($num/$default-number-of-cols) * 100%
+
+// Generate Columns
+=grid-create($num)
+    @for $i from 1 through $num
+        .col-#{$i}
+            +grid-col($i)

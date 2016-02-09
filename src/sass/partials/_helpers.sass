@@ -1,0 +1,43 @@
+// Floats
+.float-left
+    float: left
+.float-right
+    float: right
+
+// Text Alignments
+.text-left
+    text-align: left
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+.text-justify
+    text-align: justify
+
+// Lists
+.list-unstyled
+    list-style: none
+    margin-left: 0
+.list-inline
+    margin-left: 0
+    &>li
+        display: inline-block
+
+// Margins
++helpers-mgn-create($default-spacing, $default-spacing-dbl)
+
+// Padding
++helpers-pad-create($default-spacing, $default-spacing-dbl)
+
+// Hide & Show
++mq(lg)
+    +helpers-hs-create(lg)
+
++mq(md)
+    +helpers-hs-create(md)
+
++mq(sm)
+    +helpers-hs-create(sm)
+
++mq(xs)
+    +helpers-hs-create(xs)

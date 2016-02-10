@@ -10,6 +10,9 @@ It's been awhile, but Chassis.css is back and better than ever.
 - A CSS reset will no longer be shipped with Chassis.css. This change was to help allow Chassis.css become more like a SASS plugin. To do this properly, I must give creators the freedom to choose their own resets without interfering with aspects of their project
 - NPM and Grunt.js are used as the compilation tools to build out the CSS
 
+# How to Use
+Just include the css file (minified or not) in your project. These files can be found in `dist/css`
+
 ## How to Build the CSS
 1. Open your terminal and `cd` into the Chassis.css directory
 2. Run `npm i` to install the required Node.js modules

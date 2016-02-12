@@ -43,16 +43,35 @@ module.exports = function(grunt) {
             dist: {
                 src: 'dist/css/*.css'
             }
+        },
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'src/sass',
+                src: '**/*.sass',
+                dest: 'dist/chassis-sass/'
+            }
+        },
+        rename: {
+            main: {
+                files: [
+                    {src: ['dist/chassis-sass/chassis.sass'], dest: 'dist/chassis-sass/_chassis.sass'}
+                ]
+            }
         }
     });
 
     // Load plugins
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-rename');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
     // Default task
     grunt.registerTask('default', ['watch']);
-    // Build SASS task
+    // Build CSS task
     grunt.registerTask('build-css', ['sass', 'cssmin', 'postcss']);
+    // Build SASS plugin directory
+    grunt.registerTask('build-sass-plugin', ['copy', 'rename']);
 };

@@ -1,0 +1,22 @@
+// Generate Max-Width String
+@function mq-max($num)
+    @return "max-width: "+($num)+px
+
+// Generate Min-Width String
+@function mq-min($num)
+    @return "min-width: "+($num)+px
+
+// Generate Media Query
+=mq($media)
+    @if $media == lg
+        @media (mq-min($mq-lg-min))
+            @content
+    @else if $media == md
+        @media (mq-min($mq-md-min)) and (mq-max($mq-md-max))
+            @content
+    @else if $media == sm
+        @media (mq-min($mq-sm-min)) and (mq-max($mq-sm-max))
+            @content
+    @else if $media == xs
+        @media (mq-max($mq-xs-max))
+            @content

@@ -1,0 +1,43 @@
+// Grid
+.container
+    margin: 0 auto
+
+.row
+    width: 100%
+    clear: both
+    height: auto
+    overflow: auto
+
+[class*='col-']
+    position: relative
+    float: left
+    box-sizing: border-box
+    padding: $default-spacing+px
+
++grid-create($default-number-of-cols)
+
++mq(lg)
+    .container
+        width: $container-lg-width
+
++mq(md)
+    .container
+        width: $container-md-width
+
+    [class*='col-']
+        padding: 10px
+
++mq(sm)
+    .container
+        width: $container-sm-width
+
+    [class*='col-']
+        padding: 10px
+
++mq(xs)
+    .container
+        width: $container-xs-width
+
+    [class*='col-']
+        width: 100%
+        padding: $default-spacing+px $default-spacing-dbl+px

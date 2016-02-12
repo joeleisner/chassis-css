@@ -32,3 +32,5 @@ Once `npm` is done, move on to the next steps.
 
 ### How to Customize the SASS/CSS
 All customizable variables can be found in the seperate files located in `src/sass/variables/`. The filenames of each correspond to what they affect in the final build. If you'd like to compile the SASS to CSS while editing these files, run `grunt` in your terminal and code away!
+
+Keep in mind that when using the `grunt` command to watch for changes, this *will not* build the SASS plugin; The command `grunt build-sass-plugin` must be used to do so.

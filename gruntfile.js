@@ -19,14 +19,14 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/css/chassis.css': 'src/sass/chassis.sass'
+                    'dist/chassis-css/chassis.css': 'src/sass/chassis.sass'
                 }
             }
         },
         cssmin: {
             target: {
                 files: {
-                    'dist/css/chassis.min.css': 'dist/css/chassis.css'
+                    'dist/chassis-css/chassis.min.css': 'dist/chassis-css/chassis.css'
                 }
             }
         },
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: 'dist/css/*.css'
+                src: 'dist/chassis-css/*.css'
             }
         },
         copy: {

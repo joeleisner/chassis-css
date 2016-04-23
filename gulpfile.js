@@ -1,8 +1,7 @@
 'use strict';
 
 // Require
-var del = require('del'),
-    gulp = require('gulp'),
+var gulp = require('gulp'),
     config = require('./gulpconfig.js'),
     postcss = require('gulp-postcss'),
     rename = require('gulp-rename'),

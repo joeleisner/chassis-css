@@ -1,21 +1,25 @@
 {
-    "name": "chassis-css",
-    "version": "2.0.0",
-    "description": "The minimalistic grid & typography framework by Joel Eisner",
-    "keywords": ["css", "sass", "framwork", "front-end"],
-    "repository": "https://github.com/jeisner93/chassis-css",
-    "homepage": "http://joeleisner.com/chassis/",
-    "author": "Joel Eisner <jeisner93@gmail.com>",
-    "license": "BSD-2-Clause",
-    "dependencies": {
-        "autoprefixer": "latest",
-        "css-mqpacker": "latest",
-        "grunt": "~0.4.5",
-        "grunt-contrib-copy": "latest",
-        "grunt-contrib-cssmin": "latest",
-        "grunt-contrib-rename": "latest",
-        "grunt-contrib-sass": "latest",
-        "grunt-contrib-watch": "latest",
-        "grunt-postcss": "latest"
-    }
- }
+  "name": "chassis-css",
+  "version": "2.1.0",
+  "description": "The minimalistic grid & typography framework by Joel Eisner",
+  "keywords": [
+    "css",
+    "sass",
+    "framwork",
+    "front-end"
+  ],
+  "repository": "https://github.com/joeleisner/chassis-css",
+  "homepage": "http://joeleisner.com/chassis/",
+  "author": "Joel Eisner <jeisner93@gmail.com>",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "css-mqpacker": "^4.0.1",
+    "cssnano": "^3.5.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1"
+  }
+}

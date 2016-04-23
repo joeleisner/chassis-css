@@ -17,6 +17,20 @@ module.exports = {
             min: 'chassis.min.css',
             sass: '_chassis.sass'
         },
+        sass: {
+            mixins: {
+                input: 'src/sass/mixins/**/*.*',
+                output: 'dist/chassis-sass/mixins'
+            },
+            partials: {
+                input: 'src/sass/partials/**/*.*',
+                output: 'dist/chassis-sass/partials'
+            },
+            variables: {
+                input: 'src/sass/variables/**/*.*',
+                output: 'dist/chassis-sass/variables'
+            }
+        },
         watch: ['src/sass/*.sass', 'src/sass/**/*.sass']
     },
     postcss: {
@@ -30,20 +44,6 @@ module.exports = {
                 autoprefixer({browsers: ['last 2 versions']}),
                 mqpacker()
             ]
-        }
-    },
-    sass: {
-        mixins: {
-            input: 'src/sass/mixins/**/*.*',
-            output: 'dist/chassis-sass/mixins'
-        },
-        partials: {
-            input: 'src/sass/partials/**/*.*',
-            output: 'dist/chassis-sass/partials'
-        },
-        variables: {
-            input: 'src/sass/variables/**/*.*',
-            output: 'dist/chassis-sass/variables'
         }
     }
 };

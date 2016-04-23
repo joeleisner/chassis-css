@@ -51,18 +51,18 @@ gulp.task('copy-sass-dir', ['copy-sass-mixins', 'copy-sass-partials', 'copy-sass
 
 // Copy SASS Mixins Task
 gulp.task('copy-sass-mixins', function() {
-    return gulp.src(config.sass.mixins.input, {base: 'src/sass/mixins'})
-        .pipe(gulp.dest(config.sass.mixins.output));
+    return gulp.src(config.build.sass.mixins.input, {base: 'src/sass/mixins'})
+        .pipe(gulp.dest(config.build.sass.mixins.output));
 });
 
 // Copy SASS Partials Task
 gulp.task('copy-sass-partials', function() {
-    return gulp.src(config.sass.partials.input, {base: 'src/sass/partials'})
-        .pipe(gulp.dest(config.sass.partials.output));
+    return gulp.src(config.build.sass.partials.input, {base: 'src/sass/partials'})
+        .pipe(gulp.dest(config.build.sass.partials.output));
 });
 
 // Copy SASS Variables Task
 gulp.task('copy-sass-variables', function() {
-    return gulp.src(config.sass.variables.input, {base: 'src/sass/variables'})
-        .pipe(gulp.dest(config.sass.variables.output));
+    return gulp.src(config.build.sass.variables.input, {base: 'src/sass/variables'})
+        .pipe(gulp.dest(config.build.sass.variables.output));
 });

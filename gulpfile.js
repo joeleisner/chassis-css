@@ -19,11 +19,6 @@ gulp.task('watch', function() {
 // Build Task
 gulp.task('build', ['build-css', 'build-sass']);
 
-// Clean Task
-gulp.task('clean', function() {
-    return del('dist/**');
-});
-
 // Build-CSS Task
 gulp.task('build-css', ['build-css-exp', 'build-css-min']);
 

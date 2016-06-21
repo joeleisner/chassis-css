@@ -1,6 +1,7 @@
 html {
   font-size: 14px;
-  color: #303030; }
+  color: #303030;
+  -webkit-text-size-adjust: 100%; }
 
 p, ul, ol h1, h2, h3, h4 {
   margin: 7.5px 0; }

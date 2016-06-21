@@ -1,6 +1,3 @@
-'use strict';
-
-// Require
 var autoprefixer = require('autoprefixer'),
     mqpacker = require('css-mqpacker'),
     cssnano = require('cssnano');

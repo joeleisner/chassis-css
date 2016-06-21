@@ -1,5 +1,3 @@
-'use strict';
-
 // Require
 var gulp = require('gulp'),
     config = require('./gulpconfig.js'),

@@ -6,6 +6,8 @@ Check out the comprehensive guide and example at http://www.joeleisner.com/chass
 
 ## Version 2.1
 After the last upgrade, it felt about time to move away from Grunt and begin using Gulp. With this new, fresh build, compiling the framework has become not only more modularized, but more accurate with a cleaner, predictable output. To learn how to compile the framework with Gulp, look in the "How to Build..." section.
+### 2.1.1 iPhone Orientation Font-Size Fix
+Added a `-webkit-text-size-adjust: 100%` to the global partial to fix the font-size enlarging when switching to landscape mode on iPhone
 
 ### Using the CSS
 Just include the css file (minified or not) in your project. These files can be found in `dist/chassis-css`

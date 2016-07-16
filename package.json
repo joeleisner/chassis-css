@@ -1,6 +1,6 @@
 {
   "name": "chassis-css",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "The minimalistic grid & typography framework by Joel Eisner",
   "keywords": [
     "css",
@@ -14,7 +14,7 @@
   "license": "BSD-2-Clause",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "css-mqpacker": "^4.0.1",
+    "css-mqpacker": "^5.0.1",
     "cssnano": "^3.5.2",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.0",

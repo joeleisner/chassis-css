@@ -13,9 +13,9 @@
   "author": "Joel Eisner <jeisner93@gmail.com>",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "autoprefixer": "^6.3.6",
+    "autoprefixer": "^6.4.1",
     "css-mqpacker": "^5.0.1",
-    "cssnano": "^3.5.2",
+    "cssnano": "^3.7.4",
     "gulp": "^3.9.1",
     "gulp-postcss": "^6.1.0",
     "gulp-rename": "^1.2.2",

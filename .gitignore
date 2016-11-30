@@ -1,4 +1,5 @@
 .DS_Store
+.npmignore
 .sass-cache/
 dist/
 node_modules/

@@ -1,46 +1,53 @@
 # Chassis.css
-
-*The minimalistic grid & typography framework by Joel Eisner*
+The minimalistic grid & typography framework by Joel Eisner
 
 Check out the comprehensive guide and example at http://www.joeleisner.com/chassis/
 
-## Version 2.1
-After the last upgrade, it felt about time to move away from Grunt and begin using Gulp. With this new, fresh build, compiling the framework has become not only more modularized, but more accurate with a cleaner, predictable output. To learn how to compile the framework with Gulp, look in the "How to Build..." section.
-### 2.1.1 iPhone Orientation Font-Size Fix
-Added a `-webkit-text-size-adjust: 100%` to the global partial to fix the font-size enlarging when switching to landscape mode on iPhone
+## [Version 3.0](https://github.com/joeleisner/chassis-css/releases/tag/v3.0.0)
+It's been a while, and Chassis.css is back and better than ever. Here's what's in this release:
+* NPM
+    * The distribution CSS/SASS can now be installed with Node Package Manager
+* Truly mobile-first (for real this time)
+    * Styling is now defined at the mobile level first, and builds up to the desktop level with media queries
+    * Faster rendering on mobile devices
+* CSS reset
+    * A minimal CSS is once again included
+* Font Smoothing
+    * Font-smoothing for Mozilla (OSX) and WebKit browsers are now included
+* Even more changes!
+    * Utilization of GitHub releases
+    * Simplified Gulp workflow
+    * Simplified project hierarchy and structure
+    * Contextual changes to SASS variables, mixins, and partials
 
-### Using the CSS
-Just include the css file (minified or not) in your project. These files can be found in `dist/chassis-css`
+## Installation
+```
+$ npm install chassis-css
+```
 
-### Using the SASS Plugin
-Just include the directory `dist/chassis-sass` in your SASS project. This contains everything from the `src/sass` directory, but renamed for easier identification and with a root `_chassis.sass` to be used as a partial for your project.
+## Clone
+To customize Chassis.css, cloning the repository might be necessary. Once cloned, make sure to run `$ npm install` to grab all of Chassis.css' dependencies.
 
-### How to Build...
-Before building either the CSS or the SASS plugin, follow the following instructions:
-1. Open your terminal and `cd` into the Chassis.css directory
-2. Run `npm i` to install the required Node.js modules
-Once `npm` is done, move on to the next steps.
+### Watch
+```
+$ gulp
+```
 
-#### ... everything!
+### Build
+#### Everything
 ```
 $ gulp build
 ```
-
-#### ... the CSS
+#### CSS
 ```
-$ gulp build-css
+$ gulp compile-sass
 ```
-Or, if you'd like to only build the expanded/minified versions independently
+#### SASS
 ```
-$ gulp build-css-exp
-$ gulp build-css-min
+$ gulp package-sass
 ```
 
-#### ... the SASS Plugin
-```
-$ gulp build-sass
-```
-This has a sub-task called `copy-sass-dir`, which calls upon `copy-sass-mixins`, `copy-sass-partials`, and `copy-sass-variables`, which moves the directories within `src/sass` to the distribution sass-plugin directory.
-
-### How to Customize the SASS/CSS
-All customizable variables can be found in the seperate files located in `src/sass/variables/`. The filenames of each correspond to what they affect in the final build. If you'd like to compile the SASS and CSS while editing these files, run `$ gulp` or `$ gulp watch` in your terminal and code away!
+## Author
+**Joel Eisner**
+* [Twitter (@joeleisner)](https://twitter.com/joeleisner)
+* [GitHub (@joeleisner)](https://github.com/joeleisner)

@@ -31,3 +31,4 @@ It's been awhile, but Chassis.css is back and better than ever.
 * NPM and Grunt.js are used as the compilation tools to build out the CSS
 
 ## Version 1.0.0
+No version details available.

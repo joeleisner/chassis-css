@@ -1,43 +1,35 @@
-// Grid
+// Grid - Partial
+
 .container
+    width: $container-width
     margin: 0 auto
 
 .row
     width: 100%
-    clear: both
     height: auto
+    clear: both
     overflow: auto
 
 [class*='col-']
+    width: 100%
     position: relative
     float: left
     box-sizing: border-box
-    padding: $default-spacing+px
+    padding: $spacing+px ($spacing * 2)+px
 
-+grid-create($default-number-of-cols)
-
-+mq(lg)
+=grid--sm()
     .container
-        width: $container-lg-width
+        width: $container-sm-width
+    [class*='col-']
+        padding: 10px
+    +grid-generate()
 
-+mq(md)
+=grid--md()
     .container
         width: $container-md-width
 
-    [class*='col-']
-        padding: 10px
-
-+mq(sm)
+=grid--lg()
     .container
-        width: $container-sm-width
-
+        width: $container-lg-width
     [class*='col-']
-        padding: 10px
-
-+mq(xs)
-    .container
-        width: $container-xs-width
-
-    [class*='col-']
-        width: 100%
-        padding: $default-spacing+px $default-spacing-dbl+px
+        padding: $spacing+px

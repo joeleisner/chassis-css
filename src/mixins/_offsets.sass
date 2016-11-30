@@ -1,9 +1,11 @@
-// Calculate Grid Width
-=offsets-mgn($num)
-    margin-left: ($num/$default-number-of-cols) * 100%
+// Offsets - Mixins
 
-// Generate Columns
-=offsets-create($num)
-    @for $i from 1 through $num
+// Offest Margin
+=offset-mgn($num)
+    margin-left: ($num / $col-count) * 100%
+
+// Generate Offsets
+=offsets-generate()
+    @for $i from 1 through $col-count
         .offset-#{$i}
-            +offsets-mgn($i)
+            +offset-mgn($i)

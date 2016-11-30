@@ -1,15 +1,17 @@
-// Calculate Grid Width
-=pp-pull($num)
-    right: ($num/$default-number-of-cols) * 100%
+// Pull/Push - Mixins
 
-=pp-push($num)
-    left: ($num/$default-number-of-cols) * 100%
+// Calculate Pull/Push
+=pull($num)
+    right: ($num / $col-count) * 100%
 
-// Generate Columns
-=pp-create($num)
-    @for $i from 1 through $num
+=push($num)
+    left: ($num / $col-count) * 100%
+
+// Generate Pull/Push Classes
+=pp-generate()
+    @for $i from 1 through $col-count
         .pull-#{$i}
-            +pp-pull($i)
-    @for $i from 1 through $num
+            +pull($i)
+    @for $i from 1 through $col-count
         .push-#{$i}
-            +pp-push($i)
+            +push($i)

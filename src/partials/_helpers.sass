@@ -1,10 +1,10 @@
-// Floats
+// Helpers - Partial
+
 .float-left
     float: left
 .float-right
     float: right
 
-// Text Alignments
 .text-left
     text-align: left
 .text-center
@@ -14,30 +14,38 @@
 .text-justify
     text-align: justify
 
-// Lists
 .list-unstyled
     list-style: none
     margin-left: 0
+    padding-left: 0
 .list-inline
+    list-style: none
     margin-left: 0
-    &>li
+    padding-left: 0
+    li
         display: inline-block
 
-// Margins
-+helpers-mgn-create($default-spacing, $default-spacing-dbl)
+.sr-only
+    position: absolute
+    width: 1px
+    height: 1px
+    padding: 0
+    margin: -1px
+    overflow: hidden
+    clip: rect(0, 0, 0, 0)
+    border: 0
 
-// Padding
-+helpers-pad-create($default-spacing, $default-spacing-dbl)
++helpers-mgn-generate()
 
-// Hide & Show
-+mq(lg)
-    +helpers-hs-create(lg)
++helpers-pad-generate()
 
-+mq(md)
-    +helpers-hs-create(md)
++helpers-hs-generate('xs')
 
-+mq(sm)
-    +helpers-hs-create(sm)
+=helpers--sm()
+    +helpers-hs-generate('sm')
 
-+mq(xs)
-    +helpers-hs-create(xs)
+=helpers--md()
+    +helpers-hs-generate('md')
+
+=helpers--lg()
+    +helpers-hs-generate('lg')

@@ -1,28 +1,30 @@
-// Generate Margin Helper Classes
-=helpers-mgn-create($spacing, $spacing-dbl)
+// Helpers - Mixins
+
+// Generate margin helper classes
+=helpers-mgn-generate()
     .mgn-full-top
         margin-top: $spacing+px
-    .mgn-double-top
-        margin-top: $spacing-dbl+px
+    .mgn-dbl-top
+        margin-top: ($spacing * 2)+px
     .mgn-full-btm
         margin-bottom: $spacing+px
-    .mgn-double-btm
-        margin-bottom: $spacing-dbl+px
+    .mgn-dbl-btm
+        margin-bottom: ($spacing * 2)+px
 
-// Generate Padding Helper Classes
-=helpers-pad-create($spacing, $spacing-dbl)
+// Generate padding helper classes
+=helpers-pad-generate()
     .pad-full-top
         padding-top: $spacing+px
-    .pad-double-top
-        padding-top: $spacing-dbl+px
+    .pad-dbl-top
+        padding-top: ($spacing * 2)+px
     .pad-full-btm
         padding-bottom: $spacing+px
-    .pad-double-btm
-        padding-bottom: $spacing-dbl+px
+    .pad-dbl-btm
+        padding-bottom: ($spacing * 2)+px
 
-// Generate Hide & Show Classes
-=helpers-hs-create($size)
-    $list: lg md sm xs
+// Generate hide/show classes
+=helpers-hs-generate($size)
+    $list: xs sm md lg
     @each $name in $list
         @if $name == $size
             .#{$name}-show

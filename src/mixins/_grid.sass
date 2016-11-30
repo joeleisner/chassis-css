@@ -1,9 +1,11 @@
+// Grid - Mixins
+
 // Calculate Grid Width
-=grid-col($num)
-    width: ($num/$default-number-of-cols) * 100%
+=grid-col-width($num)
+    width: ($num / $col-count) * 100%
 
 // Generate Columns
-=grid-create($num)
-    @for $i from 1 through $num
+=grid-generate()
+    @for $i from 1 through $col-count
         .col-#{$i}
-            +grid-col($i)
+            +grid-col-width($i)

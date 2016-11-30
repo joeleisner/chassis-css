@@ -1,0 +1,51 @@
+// Helpers - Partial
+
+.float-left
+    float: left
+.float-right
+    float: right
+
+.text-left
+    text-align: left
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+.text-justify
+    text-align: justify
+
+.list-unstyled
+    list-style: none
+    margin-left: 0
+    padding-left: 0
+.list-inline
+    list-style: none
+    margin-left: 0
+    padding-left: 0
+    li
+        display: inline-block
+
+.sr-only
+    position: absolute
+    width: 1px
+    height: 1px
+    padding: 0
+    margin: -1px
+    overflow: hidden
+    clip: rect(0, 0, 0, 0)
+    border: 0
+
++helpers-mgn-generate()
+
++helpers-pad-generate()
+
++helpers-hs-generate('xs')
+
+=helpers--sm()
+    +helpers-hs-generate('sm')
+
+=helpers--md()
+    +helpers-hs-generate('md')
+
+=helpers--lg()
+    +helpers-hs-generate('lg')

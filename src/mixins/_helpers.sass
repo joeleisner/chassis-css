@@ -1,0 +1,38 @@
+// Helpers - Mixins
+
+// Generate margin helper classes
+=helpers-mgn-generate()
+    .mgn-full-top
+        margin-top: $spacing+px
+    .mgn-dbl-top
+        margin-top: ($spacing * 2)+px
+    .mgn-full-btm
+        margin-bottom: $spacing+px
+    .mgn-dbl-btm
+        margin-bottom: ($spacing * 2)+px
+
+// Generate padding helper classes
+=helpers-pad-generate()
+    .pad-full-top
+        padding-top: $spacing+px
+    .pad-dbl-top
+        padding-top: ($spacing * 2)+px
+    .pad-full-btm
+        padding-bottom: $spacing+px
+    .pad-dbl-btm
+        padding-bottom: ($spacing * 2)+px
+
+// Generate hide/show classes
+=helpers-hs-generate($size)
+    $list: xs sm md lg
+    @each $name in $list
+        @if $name == $size
+            .#{$name}-show
+                display: block
+            .#{$name}-hide
+                display: none
+        @else
+            .#{$name}-show
+                display: none
+            .#{$name}-hide
+                display: block

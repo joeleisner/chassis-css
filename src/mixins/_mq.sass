@@ -1,0 +1,17 @@
+// Media Queries - Mixins
+
+// Generate Min-Width String
+@function mq-min($num)
+    @return "min-width: " + ($num)+px
+
+// Generate Media Query
+=mq($media)
+    @if $media == sm
+        @media (mq-min($mq-sm))
+            @content
+    @else if $media == md
+        @media (mq-min($mq-md))
+            @content
+    @else if $media == lg
+        @media (mq-min($mq-lg))
+            @content

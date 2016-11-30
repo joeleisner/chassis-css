@@ -1,8 +1,8 @@
 var header = require('gulp-header'),
     pkg = require('../package.json');
 
-module.exports = function() {
-    var banner = [
+module.exports = function(min) {
+    var bannerExp = [
         '/**',
         ' * <%= pkg.name %> - <%= pkg.description %>',
         ' * @version <%= pkg.version %>',
@@ -13,5 +13,10 @@ module.exports = function() {
         '',
         ''
     ].join('\n');
-    return header(banner, {pkg:pkg});
+    var bannerMin = [
+        '/* <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> | <%= pkg.homepage %> */',
+        '',
+        ''
+    ].join('\n');
+    return min ? header(bannerMin, {pkg:pkg}) : header(bannerExp, {pkg:pkg});
 };

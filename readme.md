@@ -11,7 +11,7 @@ It's been a while, and Chassis.css has had a major overhaul. Here's what's in th
     * Styling is now defined at the mobile level first, and builds up to the desktop level with media queries
     * Faster rendering on mobile devices
 * CSS reset
-    * A minimal CSS is once again included
+    * A minimal CSS reset is once again included
 * Font Smoothing
     * Font-smoothing for Mozilla (OSX) and WebKit browsers are now included
 * Even more changes!

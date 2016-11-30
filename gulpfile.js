@@ -26,7 +26,7 @@ gulp.task('compile-sass', function() {
         .pipe(header())                                  // Header
         .pipe(gulp.dest(config.dest.css))                // Expanded Output
         .pipe(postcss(config.cssnano))                   // Minify
-        .pipe(header())                                  // Header
+        .pipe(header(true))                              // Header
         .pipe(rename({suffix:'.min'}))                   // Rename
         .pipe(gulp.dest(config.dest.css));               // Minified Ouput
 });

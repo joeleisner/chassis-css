@@ -6,6 +6,6 @@
 
 // Generate Offsets
 =offsets-generate()
-    @for $i from 1 through $col-count
+    @for $i from 1 through ($col-count - 1)
         .offset-#{$i}
             +offset-mgn($i)

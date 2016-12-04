@@ -1,11 +1,11 @@
 {
   "name": "chassis-css",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "The minimalistic grid & typography framework by Joel Eisner",
   "keywords": [
     "css",
     "sass",
-    "framwork",
+    "framework",
     "front-end"
   ],
   "repository": "https://github.com/joeleisner/chassis-css",

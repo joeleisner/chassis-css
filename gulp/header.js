@@ -15,7 +15,6 @@ module.exports = function(min) {
     ].join('\n');
     var bannerMin = [
         '/* <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> | <%= pkg.homepage %> */',
-        '',
         ''
     ].join('\n');
     return min ? header(bannerMin, {pkg:pkg}) : header(bannerExp, {pkg:pkg});

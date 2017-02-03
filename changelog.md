@@ -1,5 +1,13 @@
 # Changelog
 
+## [Version 3.0.2](https://github.com/joeleisner/chassis-css/releases/tag/v3.0.2)
+Even more minor fixes and improvements:
+* Proper styling for nested columns!
+    * Nested rows now remove left/right padding, keeping your content aligned and visually cohesive
+* All build-system javascript has been upgraded to ES2015 (ES6)
+* Gulp task names have been simplified
+* The following packages were upgraded: `autoprefixer`, `cssnano`, and `gulp-postcss`
+
 ## [Version 3.0.1](https://github.com/joeleisner/chassis-css/releases/tag/v3.0.1)
 Minor fixes and improvements:
 * A more verbose CSS reset within its own SASS partial

@@ -1,25 +1,24 @@
-// Require
-var config = require('./gulp/config.js'),
-    filter = require('gulp-filter'),
-    gulp = require('gulp'),
-    header = require('./gulp/header.js'),
+let config =  require('./gulp/config.js'),
+    filter =  require('gulp-filter'),
+    gulp =    require('gulp'),
+    header =  require('./gulp/header.js'),
     postcss = require('gulp-postcss'),
-    rename = require('gulp-rename'),
-    sass = require('gulp-sass');
+    rename =  require('gulp-rename'),
+    sass =    require('gulp-sass');
 
-// Default Task
+// Default
 gulp.task('default', ['watch']);
 
-// Watch Task
-gulp.task('watch', function() {
+// Watch
+gulp.task('watch', () => {
     gulp.watch(config.watch, ['build']);
 });
 
-// Build Task
-gulp.task('build', ['compile-sass', 'package-sass']);
+// Build
+gulp.task('build', ['compile', 'package']);
 
-// Compile SASS
-gulp.task('compile-sass', function() {
+// Compile
+gulp.task('compile', () => {
     return gulp.src(config.src)
         .pipe(sass().on('error', sass.logError))         // Input
         .pipe(postcss(config.autoprefixer))              // Autoprefixer
@@ -31,9 +30,9 @@ gulp.task('compile-sass', function() {
         .pipe(gulp.dest(config.dest.css));               // Minified Ouput
 });
 
-// Package SASS
-gulp.task('package-sass', function() {
-    var f = filter(['src/chassis.sass'],{restore:true}); // Filter Parameters
+// Package
+gulp.task('package', () => {
+    let f = filter(['src/chassis.sass'],{restore:true}); // Filter Parameters
     return gulp.src(config.watch)                        // Input
         .pipe(f)                                         // Filter
         .pipe(rename({prefix:'_'}))                      // Rename

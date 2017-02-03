@@ -1,5 +1,5 @@
-var autoprefixer = require('autoprefixer'),
-    cssnano = require('cssnano');
+let autoprefixer = require('autoprefixer'),
+    cssnano =      require('cssnano');
 
 module.exports = {
     autoprefixer: [autoprefixer({browsers:['last 2 versions']})],

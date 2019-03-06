@@ -41,6 +41,7 @@ Check out the [changelog](changelog.md) for previous release information.
 ```shell
 # NPM Package
 npm i chassis-css
+
 # Repo
 git clone git@github.com:joeleisner/chassis-css.git
 cd chassis-css

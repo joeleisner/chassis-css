@@ -38,30 +38,35 @@ It's been a while, and Chassis.css has had a major overhaul. Here's what's in th
 Check out the [changelog](changelog.md) for previous release information.
 
 ## Installation
-```
-$ npm install chassis-css
-```
-
-## Clone
-To customize Chassis.css, cloning the repository might be necessary. Once cloned, make sure to run `$ npm install` to grab all of Chassis.css' dependencies.
-
-### Watch
-```
-$ gulp
+```shell
+# NPM Package
+npm i chassis-css
+# Repo
+git clone git@github.com:joeleisner/chassis-css.git
+cd chassis-css
+npm i
 ```
 
-### Build
-#### Everything
-```
-$ gulp build
-```
-#### CSS
-```
-$ gulp compile
-```
-#### SASS
-```
-$ gulp package
+## Development
+```shell
+# *:exp = expanded, *:min = minified
+
+# Build all (CSS & SASS) assets
+gulp build
+gulp build:exp
+gulp build:min
+
+# Build CSS assets
+gulp compile
+gulp compile:exp
+gulp compile:min
+
+# Build SASS assets
+gulp package
+
+# Build all (CSS & SASS) assets while watching for changes
+gulp
+gulp watch
 ```
 
 ## Author

@@ -1,22 +1,24 @@
-const gulp  = require('gulp'),
-    header  = require('../modules/header'),
-    minify  = require('../modules/minify'),
-    postcss = require('gulp-postcss'),
-    prefix  = require('../modules/prefix'),
-    rename  = require('../modules/rename'),
-    sass    = require('gulp-sass');
-
-let processors = [ prefix() ];
+const gulp     = require('gulp'),
+    header     = require('../modules/header'),
+    minify     = require('../modules/minify'),
+    postcss    = require('gulp-postcss'),
+    prefix     = require('../modules/prefix'),
+    rename     = require('../modules/rename'),
+    sass       = require('gulp-sass'),
+    processors = {
+        exp: [ prefix() ],
+        min: [ prefix(), minify() ]
+    };
 
 function compile(style) {
     if (!style) return gulp.series(gulp.parallel(compile('exp'), compile('min')));
 
-    if (style === 'min') processors.push(minify());
+    const processor = processors[style];
 
     function method() {
         return gulp.src('src/*.sass')
             .pipe(sass())
-            .pipe(postcss(processors))
+            .pipe(postcss(processor))
             .pipe(header(style))
             .pipe(rename(style))
             .pipe(gulp.dest('dist/css'));

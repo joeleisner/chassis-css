@@ -1,33 +1,35 @@
-// Grid - Partial
+// Partials - Grid
 
 .container
     width: $container-width
-    margin: 0 auto
+    margin-left: auto
+    margin-right: auto
     padding-left: $spacing+px
     padding-right: $spacing+px
 
 .row
-    height: auto
+    display: flex
+    flex-direction: column
     margin-left: -$spacing+px
     margin-right: -$spacing+px
-    clear: both
-    overflow: auto
 
-[class*='col-']
-    width: 100%
-    position: relative
-    float: left
+.col, [class*='col-']
+    flex: 1 0 auto
     padding: $spacing+px
 
-=grid--sm()
+=grid--sm
     .container
         width: $container-sm-width
-    +grid-generate()
 
-=grid--md()
+    .row
+        flex-direction: row
+
+    +grid-generate
+
+=grid--md
     .container
         width: $container-md-width
 
-=grid--lg()
+=grid--lg
     .container
         width: $container-lg-width

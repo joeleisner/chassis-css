@@ -1,14 +1,14 @@
-// Pull/Push - Mixins
+// Mixins - Pull & push
 
-// Calculate Pull/Push
+// Calculate pull & push
 =pull($num)
     right: ($num / $col-count) * 100%
 
 =push($num)
     left: ($num / $col-count) * 100%
 
-// Generate Pull/Push Classes
-=pp-generate()
+// Generate pull & push classes
+=pp-generate
     @for $i from 1 through $col-count
         .pull-#{$i}
             +pull($i)

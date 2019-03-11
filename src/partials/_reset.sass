@@ -1,8 +1,63 @@
 // Partials - Reset
 
-body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul,
-ol, li, dl, dt, dd, form, a, fieldset, input, th, td
+*, *::before, *::after
+    box-sizing: border-box
+
+html
+    font-size: $font-size
+    line-height: $line-height
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    -webkit-text-size-adjust: 100%
+
+body, input
+    margin: 0
+
+h1, h2, h3, h4, h5, h6
+    margin-top: 0
+    margin-bottom: .5rem
+
+h1
+    font-size: $h1-font-size
+
+h2
+    font-size: $h2-font-size
+
+h3
+    font-size: $h3-font-size
+
+h4
+    font-size: $h4-font-size
+
+h5
+    font-size: $h5-font-size
+
+h6
+    font-size: $h6-font-size
+
+p, ul, ol, dl, pre
+    margin-top: 0
+    margin-bottom: 1rem
+
+small, dt
+    font-size: $small-font-size
+
+strong, 
+    font-weight: $strong-font-weight
+
+em
+    font-style: $em-font-style
+
+dd
+    margin-left: 0
+    margin-bottom: .5rem
+
+blockquote
+    margin: 0 0 1rem
+    font-size: $bq-font-size
+
+fieldset
+    min-width: 0
     margin: 0
     padding: 0
     border: 0
-    outline: none

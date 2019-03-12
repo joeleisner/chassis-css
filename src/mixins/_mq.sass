@@ -1,8 +1,8 @@
 // Mixins - Media queries
 
 // Generate minimum width string
-@function mq-min($num)
-    @return "min-width:" + $num+px
+@function mq-min($breakpoint)
+    @return "min-width:" + $breakpoint
 
 // Generate media queries
 =mq($media)

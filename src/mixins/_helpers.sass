@@ -25,14 +25,19 @@
 // Generate hide/show classes
 =helpers-hs-generate($size)
     $list: xs sm md lg
-    @each $name in $list
-        @if $name == $size
-            .#{$name}-show
-                display: block
-            .#{$name}-hide
-                display: none
+    $show: ()
+    $hide: ()
+    // Group selectors that should be shown/hidden
+    @each $breakpoint in $list
+        @if $breakpoint == $size
+            $show: append($show, "." + $breakpoint + -show, comma)
+            $hide: append($hide, "." + $breakpoint + -hide, comma)
         @else
-            .#{$name}-show
-                display: none
-            .#{$name}-hide
-                display: block
+            $show: append($show, "." + $breakpoint + -hide, comma)
+            $hide: append($hide, "." + $breakpoint + -show, comma)
+    // Show all selectors that are meant to be shown
+    #{$show}
+        display: block
+    // Hide all selectors that are meant to be hidden
+    #{$hide}
+        display: none

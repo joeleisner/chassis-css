@@ -11,6 +11,16 @@
   "repository": "https://github.com/joeleisner/chassis-css",
   "homepage": "http://joeleisner.com/chassis/",
   "author": "Joel Eisner <jeisner93@gmail.com>",
+  "scripts": {
+    "build":       "npx gulp build",
+    "build:exp":   "npx gulp build:exp",
+    "build:min":   "npx gulp build:min",
+    "compile":     "npx gulp compile",
+    "compile:exp": "npx gulp compile:exp",
+    "compile:min": "npx gulp compile:min",
+    "package":     "npx gulp package",
+    "watch":       "npx gulp watch"
+  },
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^9.4.10",

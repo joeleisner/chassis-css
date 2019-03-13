@@ -1,17 +1,12 @@
 // Mixins - Media queries
 
-// Generate minimum width string
-@function mq-min($breakpoint)
-    @return "min-width:" + $breakpoint
-
-// Generate media queries
-=mq($media)
-    @if $media == sm
-        @media (mq-min($mq-sm))
+=media-query($breakpoint)
+    @if $breakpoint == sm
+        @media (min-width:$media-query-sm-breakpoint)
             @content
-    @else if $media == md
-        @media (mq-min($mq-md))
+    @else if $breakpoint == md
+        @media (min-width:$media-query-md-breakpoint)
             @content
-    @else if $media == lg
-        @media (mq-min($mq-lg))
+    @else if $breakpoint == lg
+        @media (min-width:$media-query-lg-breakpoint)
             @content

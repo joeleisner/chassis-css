@@ -1,0 +1,7 @@
+// Mixins - Utilities - Text Alignment
+
+=text-alignment-classes
+    $alignments: left center right justify
+    @each $alignment in $alignments
+        .text-#{$alignment}
+            text-align: $alignment

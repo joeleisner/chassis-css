@@ -19,6 +19,11 @@
     padding-left: $spacing
     padding-right: $spacing
 
+[class*='offset-']
+    margin-left: 0
+
++orders-generate
+
 =grid--sm
     .container
         width: $container-sm-width
@@ -26,7 +31,12 @@
     .row
         flex-direction: row
 
-    +grid-generate
+    +cols-generate
+
+    .offset-auto
+        margin-left: auto
+
+    +offsets-generate
 
 =grid--md
     .container

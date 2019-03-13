@@ -1,12 +1,34 @@
 // Mixins - Grid
 
+// ----- Columns -----
+
 // Calculate column width
-=grid-col-width($num)
+=col-width($num)
     flex: 0 0 ($num / $col-count) * 100%
     max-width: ($num / $col-count) * 100%
 
 // Generate columns
-=grid-generate
+=cols-generate
     @for $i from 1 through $col-count
         .col-#{$i}
-            +grid-col-width($i)
+            +col-width($i)
+
+// ----- Offsets -----
+
+// Offest margin
+=offset-mgn-left($num)
+    margin-left: ($num / $col-count) * 100%
+
+// Generate offsets
+=offsets-generate
+    @for $i from 1 through $col-count - 1
+        .offset-#{$i}
+            +offset-mgn-left($i)
+
+// ----- Order -----
+
+// Generate order classes
+=orders-generate
+    @for $i from 1 through $col-count
+        .order-#{$i}
+            order: $i

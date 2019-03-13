@@ -1,5 +1,12 @@
 // Mixins - Helpers
 
+// Generate text alignment classes
+=text-alignment-classes
+    $alignments: left center right justify
+    @each $alignment in $alignments
+        .text-#{$alignment}
+            text-align: $alignment
+
 // Generate margin helper classes
 =helpers-mgn-generate
     .mt-1

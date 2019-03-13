@@ -50,24 +50,25 @@ npm i
 
 ## Development
 ```shell
+# npm run * / npx gulp *
 # *:exp = expanded, *:min = minified
 
 # Build all (CSS & SASS) assets
-gulp build
-gulp build:exp
-gulp build:min
+npm run build
+npm run build:exp
+npm run build:min
 
 # Build CSS assets
-gulp compile
-gulp compile:exp
-gulp compile:min
+npm run compile
+npm run compile:exp
+npm run compile:min
 
 # Build SASS assets
-gulp package
+npm run package
 
 # Build all (CSS & SASS) assets while watching for changes
-gulp
-gulp watch
+npm run
+npm run watch
 ```
 
 ## Author

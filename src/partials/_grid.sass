@@ -13,6 +13,8 @@
     flex-direction: column
     margin-left: -$spacing
     margin-right: -$spacing
+    &.reverse
+        flex-direction: column-reverse
 
 .col, [class*='col-']
     flex: 1
@@ -30,6 +32,8 @@
 
     .row
         flex-direction: row
+        &.reverse
+            flex-direction: row-reverse
 
     +cols-generate
 

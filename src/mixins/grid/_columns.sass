@@ -1,0 +1,18 @@
+// Mixins - Grid - Columns
+
+// Calculate column width rules
+=column-width($num)
+    flex: 0 0 ($num / $column-count) * 100%
+    max-width: ($num / $column-count) * 100%
+
+// Generate columns
+=column-classes($breakpoint)
+    @if $breakpoint == xs
+        .col, [class*='col-']
+            flex: 1
+            padding-left: $spacing
+            padding-right: $spacing
+    @else if $breakpoint == sm
+        @for $i from 1 through $column-count
+            .col-#{$i}
+                +column-width($i)

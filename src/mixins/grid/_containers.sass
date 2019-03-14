@@ -1,0 +1,16 @@
+// Mixins - Grid - Containers
+
+=container-width($breakpoint)
+    width: map-get($container-width, $breakpoint)
+
+=container-class($breakpoint)
+    @if $breakpoint == xs
+        .container
+            +container-width($breakpoint)
+            margin-left: auto
+            margin-right: auto
+            padding-left: $spacing
+            padding-right: $spacing
+    @else
+        .container
+            +container-width($breakpoint)

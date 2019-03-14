@@ -1,0 +1,7 @@
+// Mixins - Grid - Orders
+
+// Generate order classes
+=order-classes
+    @for $i from 1 through $column-count
+        .order-#{$i}
+            order: $i

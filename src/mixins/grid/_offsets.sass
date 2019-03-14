@@ -1,10 +1,10 @@
 // Mixins - Grid - Offsets
 
-// Offest margin
+// Calculate offset margin-left rule
 =offset-margin-left($num)
     margin-left: ($num / $column-count) * 100%
 
-// Generate offsets
+// Generate offset classes
 =offset-classes($breakpoint)
     @if $breakpoint == xs
         [class*='offset-']

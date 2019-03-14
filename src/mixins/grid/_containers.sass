@@ -1,8 +1,10 @@
 // Mixins - Grid - Containers
 
+// Calculate container width rule
 =container-width($breakpoint)
     width: map-get($container-width, $breakpoint)
 
+// Generate container class
 =container-class($breakpoint)
     @if $breakpoint == xs
         .container

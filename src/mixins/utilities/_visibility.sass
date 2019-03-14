@@ -1,20 +1,21 @@
 // Mixins - Utilities - Visibility
 
-=visibility-classes($size)
-    $list: xs sm md lg
+// Generate visibility classes
+=visibility-classes($current-breakpoint)
+    $breakpoints: xs sm md lg
     $show: ()
     $hide: ()
     // Group selectors that should be shown/hidden
-    @each $breakpoint in $list
-        @if $breakpoint == $size
+    @each $breakpoint in $breakpoints
+        @if $breakpoint == $current-breakpoint
             $show: append($show, "." + $breakpoint + -show, comma)
             $hide: append($hide, "." + $breakpoint + -hide, comma)
         @else
             $show: append($show, "." + $breakpoint + -hide, comma)
             $hide: append($hide, "." + $breakpoint + -show, comma)
-    // Show all selectors that are meant to be shown
+    // Make all classes that are meant to be shown visible
     #{$show}
         display: block
-    // Hide all selectors that are meant to be hidden
+    // Make all classes that are meant to be hidden invisble
     #{$hide}
         display: none

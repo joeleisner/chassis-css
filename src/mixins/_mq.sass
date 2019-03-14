@@ -1,12 +1,8 @@
 // Mixins - Media queries
 
+@function media-query-min-width($breakpoint)
+    @return "min-width:" + map-get($media-query-breakpoint, $breakpoint)
+
 =media-query($breakpoint)
-    @if $breakpoint == sm
-        @media (min-width:$media-query-sm-breakpoint)
-            @content
-    @else if $breakpoint == md
-        @media (min-width:$media-query-md-breakpoint)
-            @content
-    @else if $breakpoint == lg
-        @media (min-width:$media-query-lg-breakpoint)
-            @content
+    @media (media-query-min-width($breakpoint))
+        @content

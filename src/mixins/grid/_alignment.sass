@@ -1,0 +1,12 @@
+// Mixins - Grid - Alignment
+
+// Generate vertical/horizontal alignment classes
+=alignment-classes
+    @each $key in map-keys($vertical-alignment)
+        .align-items-#{$key}
+            align-items: map-get($vertical-alignment, $key)
+        .align-self-#{$key}
+            align-self: map-get($vertical-alignment, $key)
+    @each $key in map-keys($horizontal-alignment)
+        .justify-content-#{$key}
+            justify-content: map-get($horizontal-alignment, $key)

@@ -1,5 +1,22 @@
 # Changelog
 
+## [Version 4.0.0](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.0)
+Chassis.css has been overhauled from the ground up to support some killer new features. Here's what you can look forward to:
+
+* The grid system now uses Flexbox!
+    * You can simply use the `.col` class to automatically take up remaining space in a row.
+    * `.row.reverse` allows you to quickly reverse the order of a row.
+    * Gone are the days of push/pull - You can now order/space your columns with `.order-*` and `.offset-*` classes.
+    * You can now vertically/horizontally align columns with `.align-items-*`, `.align-self-*`, and `.justify-content-*` classes.
+* The reset and typography defaults have been ironed out.
+    * The reset only overrides necessary things and avoids practices that can compromise accessibility.
+    * Overall sizes and spacing between typography elements have been simplified dramatically.
+    * New heading `.h*` classes allow you to make any typography element look like a heading.
+* Utility classes, particularly for margins/padding, have become way more concise/versatile.
+    * These classes are now constructable, allowing you to target all/specfic sides, add negative/positive adjustments, and utilize 6 levels of adjustments.
+
+Plus more! There's a lot in this update to get excited about.
+
 ## [Version 3.0.2](https://github.com/joeleisner/chassis-css/releases/tag/v3.0.2)
 Even more minor fixes and improvements:
 * Proper styling for nested columns!

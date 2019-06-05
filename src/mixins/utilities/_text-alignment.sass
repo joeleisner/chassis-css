@@ -2,7 +2,7 @@
 
 // Generate text alignment classes
 =text-alignment-classes
-    $alignments: left center right justify
-    @each $alignment in $alignments
-        .text-#{$alignment}
+    $alignments: (l: left, c: center, r: right, j: justify)
+    @each $key, $alignment in $alignments
+        .t-#{$key}
             text-align: $alignment

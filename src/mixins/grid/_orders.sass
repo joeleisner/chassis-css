@@ -1,7 +1,13 @@
 // Mixins - Grid - Orders
 
 // Generate order classes
-=order-classes
+=order-classes($breakpoint)
     @for $i from 1 through $column-count
-        .order-#{$i}
-            order: $i
+        @if $breakpoint == xs
+            .or-#{$i}
+                order: $i
+            .or-r#{$i}
+                order: initial
+        @else if $breakpoint == sm
+            .or-r#{$i}
+                order: $i

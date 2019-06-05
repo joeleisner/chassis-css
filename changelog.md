@@ -5,9 +5,9 @@ Chassis.css has been overhauled from the ground up to support some killer new fe
 
 * The grid system now uses Flexbox!
     * You can simply use the `.col` class to automatically take up remaining space in a row.
-    * `.row.reverse` allows you to quickly reverse the order of a row.
-    * Gone are the days of push/pull - You can now order/space your columns with `.order-*` and `.offset-*` classes.
-    * You can now vertically/horizontally align columns with `.align-items-*`, `.align-self-*`, and `.justify-content-*` classes.
+    * `.row.rev` allows you to quickly reverse the order of a row.
+    * Gone are the days of push/pull - You can now order/space your columns with `.or-*` (order), `.or-r*` (order reset on mobile), and `.os-*` (offset) classes.
+    * You can now vertically/horizontally align columns with `.ai-*` (align-items), `.as-*` (align-self), and `.jc-*` (justify-content) classes.
 * The reset and typography defaults have been ironed out.
     * The reset only overrides necessary things and avoids practices that can compromise accessibility.
     * Overall sizes and spacing between typography elements have been simplified dramatically.

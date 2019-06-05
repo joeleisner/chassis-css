@@ -8,6 +8,7 @@
     "framework",
     "front-end"
   ],
+  "main": "dist/css/chassis.min.css",
   "repository": "https://github.com/joeleisner/chassis-css",
   "homepage": "http://joeleisner.com/chassis/",
   "author": "Joel Eisner <jeisner93@gmail.com>",
@@ -23,17 +24,15 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
+    "autoprefixer": "^9.6.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-empty": "^0.1.2",
-    "gulp-filter": "^5.1.0",
+    "gulp-filter": "^6.0.0",
     "gulp-header": "^2.0.7",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.2"
   },
-  "browserslist": [
-    "last 2 versions and > 0% and not dead"
-  ]
+  "browserslist": "last 2 versions and > 0% and not dead"
 }

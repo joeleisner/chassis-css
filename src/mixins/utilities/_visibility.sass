@@ -8,11 +8,11 @@
     // Group selectors that should be shown/hidden
     @each $breakpoint in $breakpoints
         @if $breakpoint == $current-breakpoint
-            $show: append($show, "." + $breakpoint + -show, comma)
-            $hide: append($hide, "." + $breakpoint + -hide, comma)
+            $show: append($show, "." + $breakpoint + -s, comma)
+            $hide: append($hide, "." + $breakpoint + -h, comma)
         @else
-            $show: append($show, "." + $breakpoint + -hide, comma)
-            $hide: append($hide, "." + $breakpoint + -show, comma)
+            $show: append($show, "." + $breakpoint + -h, comma)
+            $hide: append($hide, "." + $breakpoint + -s, comma)
     // Make all classes that are meant to be shown visible
     #{$show}
         display: block

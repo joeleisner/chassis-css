@@ -12,13 +12,8 @@ const header = require('gulp-header'),
 
 `,
         min:
-`/* <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> | <%= pkg.homepage %> */
-
+`/*! <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %> */
 `
     };
 
-function method(style) {
-    return header(banner[style], { pkg });
-}
-
-module.exports = method;
+module.exports = style => header(banner[style], { pkg });

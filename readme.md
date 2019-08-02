@@ -54,8 +54,9 @@ npm run compile:min
 npm run package
 
 # Build all (CSS & SASS) assets while watching for changes
-npm run
 npm run watch
+npm run watch:exp
+npm run watch:min
 ```
 
 ## Author

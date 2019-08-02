@@ -24,7 +24,7 @@ function compile(style) {
             .pipe(gulp.dest('dist/css'));
     }
 
-    method.displayName = 'compile:' + style;
+    method.displayName = `compile:${ style }`;
 
     return method;
 }

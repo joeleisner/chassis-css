@@ -24,7 +24,9 @@
     "compile:exp": "npx gulp compile:exp",
     "compile:min": "npx gulp compile:min",
     "package": "npx gulp package",
-    "watch": "npx gulp watch"
+    "watch": "npx gulp watch",
+    "watch:exp": "npx gulp watch:exp",
+    "watch:min": "npx gulp watch:min"
   },
   "license": "MIT",
   "devDependencies": {

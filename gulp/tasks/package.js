@@ -2,7 +2,7 @@ const filter = require('gulp-filter'),
     gulp     = require('gulp'),
     rename   = require('gulp-rename');
 
-function method() {
+function pkg() {
     const mainFile = filter([ 'src/chassis.sass' ], { restore: true });
     return gulp.src('src/**/*')
         .pipe(mainFile)
@@ -11,6 +11,4 @@ function method() {
         .pipe(gulp.dest('dist/sass'));
 }
 
-method.displayName = 'package';
-
-module.exports = method;
+module.exports = pkg;

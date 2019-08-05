@@ -1,7 +1,7 @@
 {
   "name": "chassis-css",
   "version": "4.0.0",
-  "description": "The minimalistic grid & typography framework by Joel Eisner",
+  "description": "A minimalistic grid & typography CSS framework",
   "keywords": [
     "css",
     "flexbox",

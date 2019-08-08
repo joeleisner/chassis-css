@@ -5,8 +5,8 @@
     @if $breakpoint == xs
         .row
             display: flex
-            flex-wrap: wrap
             flex-direction: column
+            flex-wrap: nowrap
             margin-left: -$spacing
             margin-right: -$spacing
             &.rev
@@ -14,5 +14,6 @@
     @else if $breakpoint == sm
         .row
             flex-direction: row
+            flex-wrap: wrap
             &.rev
                 flex-direction: row-reverse

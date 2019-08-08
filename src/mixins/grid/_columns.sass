@@ -8,8 +8,9 @@
 // Generate column classes
 =column-classes($breakpoint)
     @if $breakpoint == xs
-        .col, [class*='col-']
+        [class*='col']
             flex: 1
+            max-width: 100%
             padding-left: $spacing
             padding-right: $spacing
     @else if $breakpoint == sm

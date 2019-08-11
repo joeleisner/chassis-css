@@ -1,7 +1,7 @@
-# Chassis.css
-The minimalistic grid & typography framework by Joel Eisner
+<p align="center"><img alt="Chassis.css icon" src="images/icon.png?raw=true" width="60" /></p>
+<h1 align="center">Chassis.css</h1>
 
-Check out the comprehensive guide and example at http://www.joeleisner.com/chassis/
+A minimalistic grid & typography CSS framework. Check out the comprehensive guide and example at https://chassis.joeleisner.com
 
 ## Changelog
 

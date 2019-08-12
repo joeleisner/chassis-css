@@ -1,19 +1,11 @@
 // Mixins - Grid - Rows
 
 // Generate row class
-=row-class($breakpoint)
-    @if $breakpoint == xs
-        .row
-            display: flex
-            flex-direction: column
-            flex-wrap: nowrap
-            margin-left: -$spacing
-            margin-right: -$spacing
-            &.rev
-                flex-direction: column-reverse
-    @else if $breakpoint == sm
-        .row
-            flex-direction: row
-            flex-wrap: wrap
-            &.rev
-                flex-direction: row-reverse
+=row-class()
+    .row
+        display: flex
+        flex-wrap: wrap
+        margin-left: -$spacing
+        margin-right: -$spacing
+        &.rev
+            flex-flow: row-reverse wrap-reverse

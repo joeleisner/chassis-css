@@ -1,25 +1,52 @@
 {
   "name": "chassis-css",
-  "version": "3.0.2",
-  "description": "The minimalistic grid & typography framework by Joel Eisner",
+  "version": "4.0.0",
+  "description": "A minimalistic grid & typography CSS framework",
   "keywords": [
     "css",
-    "sass",
+    "flexbox",
     "framework",
-    "front-end"
+    "front-end",
+    "mobile-first",
+    "responsive",
+    "sass",
+    "web"
   ],
+  "main": "dist/css/chassis.min.css",
+  "unpkg": "dist/css/chassis.min.css",
+  "style": "dist/css/chassis.min.css",
   "repository": "https://github.com/joeleisner/chassis-css",
   "homepage": "http://joeleisner.com/chassis/",
   "author": "Joel Eisner <jeisner93@gmail.com>",
+  "scripts": {
+    "build": "npx gulp build",
+    "build:exp": "npx gulp build:exp",
+    "build:min": "npx gulp build:min",
+    "compile": "npx gulp compile",
+    "compile:exp": "npx gulp compile:exp",
+    "compile:min": "npx gulp compile:min",
+    "package": "npx gulp package",
+    "watch": "npx gulp watch",
+    "watch:exp": "npx gulp watch:exp",
+    "watch:min": "npx gulp watch:min"
+  },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^6.7.2",
-    "cssnano": "^3.10.0",
-    "gulp": "^3.9.1",
-    "gulp-filter": "^4.0.0",
-    "gulp-header": "^1.8.8",
-    "gulp-postcss": "^6.3.0",
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-empty": "^0.1.2",
+    "gulp-filter": "^6.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.1"
-  }
+    "gulp-sass": "^4.0.2"
+  },
+  "files": [
+    "dist",
+    "changelog.md",
+    "license",
+    "readme.md"
+  ],
+  "browserslist": "last 2 versions and > 0% and not dead"
 }

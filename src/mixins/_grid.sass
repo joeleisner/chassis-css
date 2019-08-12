@@ -1,11 +1,8 @@
-// Grid - Mixins
+// Mixins - Grid
 
-// Calculate Grid Width
-=grid-col-width($num)
-    width: ($num / $col-count) * 100%
-
-// Generate Columns
-=grid-generate()
-    @for $i from 1 through $col-count
-        .col-#{$i}
-            +grid-col-width($i)
+@import "grid/containers"
+@import "grid/rows"
+@import "grid/columns"
+@import "grid/alignment"
+@import "grid/offsets"
+@import "grid/orders"

@@ -1,67 +1,62 @@
-# Chassis.css
-The minimalistic grid & typography framework by Joel Eisner
+<p align="center"><img alt="Chassis.css icon" src="images/icon.png?raw=true" width="60" /></p>
+<h1 align="center">Chassis.css</h1>
 
-Check out the comprehensive guide and example at http://www.joeleisner.com/chassis/
+A minimalistic grid & typography CSS framework. Check out the comprehensive guide at https://chassis.joeleisner.com.
 
 ## Changelog
 
-## [Version 3.0.2](https://github.com/joeleisner/chassis-css/releases/tag/v3.0.2)
-Even more minor fixes and improvements:
-* Proper styling for nested columns!
-    * Nested rows now remove left/right padding, keeping your content aligned and visually cohesive
-* All build-system javascript has been upgraded to ES2015 (ES6)
-* The following packages were upgraded: `autoprefixer`, `cssnano`, and `gulp-postcss`
+### [Version 4.0.0](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.0)
+Chassis.css has been overhauled from the ground up to support some killer new features. Here's what you can look forward to:
 
-### [Version 3.0.1](https://github.com/joeleisner/chassis-css/releases/tag/v3.0.1)
-Minor fixes and improvements:
-* A more verbose CSS reset within its own SASS partial
-* Removed unnecessary offsets class (.offset-12)
-* Fixed a misspelling in one of the package.json keywords
+* The grid system now uses Flexbox!
+    * You can simply use the `.col` class to automatically take up remaining space in a row.
+    * `.row.rev` allows you to quickly reverse the order of a row.
+    * Gone are the days of push/pull - You can now order/space your columns with `.or-*` (order), `.or-r*` (order reset on mobile), and `.os-*` (offset) classes.
+    * You can now vertically/horizontally align columns with `.ai-*` (align-items), `.as-*` (align-self), and `.jc-*` (justify-content) classes.
+* The reset and typography defaults have been ironed out.
+    * The reset only overrides necessary things and avoids practices that can compromise accessibility.
+    * Overall sizes and spacing between typography elements have been simplified dramatically.
+    * New heading `.h*` classes allow you to make any typography element look like a heading.
+* Utility classes, particularly for margins/padding, have become way more concise/versatile.
+    * These classes are now constructable, allowing you to target all/specfic sides, add negative/positive adjustments, and utilize 6 levels of adjustments.
 
-### [Version 3.0.0](https://github.com/joeleisner/chassis-css/releases/tag/v3.0.0)
-It's been a while, and Chassis.css has had a major overhaul. Here's what's in this release:
-* NPM
-    * The distribution CSS/SASS can now be installed with Node Package Manager
-* Truly mobile-first (for real this time)
-    * Styling is now defined at the mobile level first, and builds up to the desktop level with media queries
-    * Faster rendering on mobile devices
-* CSS reset
-    * A minimal CSS reset is once again included
-* Font Smoothing
-    * Font-smoothing for Mozilla (OSX) and WebKit browsers are now included
-* Even more changes!
-    * Utilization of GitHub releases
-    * Simplified Gulp workflow
-    * Simplified project hierarchy and structure
-    * Contextual changes to SASS variables, mixins, and partials
+Plus more! There's a lot in this update to get excited about.
 
 Check out the [changelog](changelog.md) for previous release information.
 
 ## Installation
-```
-$ npm install chassis-css
+```shell
+# NPM Package
+npm i chassis-css
+
+# Repo
+git clone git@github.com:joeleisner/chassis-css.git
+cd chassis-css
+npm i
 ```
 
-## Clone
-To customize Chassis.css, cloning the repository might be necessary. Once cloned, make sure to run `$ npm install` to grab all of Chassis.css' dependencies.
+## Development
+```shell
+# npm run * / npx gulp *
+# *:exp = expanded, *:min = minified
 
-### Watch
-```
-$ gulp
-```
+# Build all (CSS & SASS) assets
+npm run build
+npm run build:exp
+npm run build:min
 
-### Build
-#### Everything
-```
-$ gulp build
-```
-#### CSS
-```
-$ gulp compile
-```
-#### SASS
-```
-$ gulp package
+# Build CSS assets
+npm run compile
+npm run compile:exp
+npm run compile:min
+
+# Build SASS assets
+npm run package
+
+# Build all (CSS & SASS) assets while watching for changes
+npm run watch
+npm run watch:exp
+npm run watch:min
 ```
 
 ## Author

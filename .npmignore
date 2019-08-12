@@ -1,8 +1,0 @@
-.DS_Store
-.git/
-.gitignore
-.jshintrc
-.sass-cache/
-gulp/
-gulpfile.js
-src/

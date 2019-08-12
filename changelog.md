@@ -1,5 +1,15 @@
 # Changelog
 
+## [Version 4.0.1](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.1)
+This patch brings some much needed stability to the framework after its big release. Here's what to expect:
+
+* Rows no longer change their `flex-direction` between `column` on extra small viewports and `row` on small viewports and above.
+    * Rows now wrap columns to vertically stack them.
+    * Vertical and horizontal alignment modifier classes no longer flip-flop functionality between extra small and small viewports.
+    * The reverse row modifier class, `.row.rev`, has been changed.
+    * The way columns fill the row's width on extra small viewports has been changed.
+* New align content modifier classes, `.ac-*`, have been added to provide more vertical alignment options.
+
 ## [Version 4.0.0](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.0)
 Chassis.css has been overhauled from the ground up to support some killer new features. Here's what you can look forward to:
 

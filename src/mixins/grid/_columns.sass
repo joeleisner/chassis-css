@@ -9,11 +9,12 @@
 =column-classes($breakpoint)
     @if $breakpoint == xs
         [class*='col']
-            flex: 1
-            max-width: 100%
+            +column-width(12)
             padding-left: $spacing
             padding-right: $spacing
     @else if $breakpoint == sm
+        .col
+            flex: 1
         @for $i from 1 through $column-count
             .col-#{$i}
                 +column-width($i)

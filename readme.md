@@ -5,6 +5,9 @@ A minimalistic grid & typography CSS framework. Check out the comprehensive guid
 
 ## Changelog
 
+### [Version 4.0.2](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.2)
+This patch no longer explicitly sets the root font-size to 16px, leaving it up to the browser's default and respecting the user's preference if set. It also updates some packages to their latest version.
+
 ### [Version 4.0.1](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.1)
 This patch brings some much needed stability to the framework after its big release. Here's what to expect:
 
@@ -28,7 +31,7 @@ Chassis.css has been overhauled from the ground up to support some killer new fe
     * Overall sizes and spacing between typography elements have been simplified dramatically.
     * New heading `.h*` classes allow you to make any typography element look like a heading.
 * Utility classes, particularly for margins/padding, have become way more concise/versatile.
-    * These classes are now constructable, allowing you to target all/specfic sides, add negative/positive adjustments, and utilize 6 levels of adjustments.
+    * These classes are now constructable, allowing you to target all/specific sides, add negative/positive adjustments, and utilize 6 levels of adjustments.
 
 Plus more! There's a lot in this update to get excited about.
 

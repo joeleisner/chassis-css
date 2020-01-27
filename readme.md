@@ -5,6 +5,9 @@ A minimalistic grid & typography CSS framework. Check out the comprehensive guid
 
 ## Changelog
 
+### [Version 4.0.3](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.3)
+This patch explicitly sets the font-size of code elements (`pre`, `code`, `kbd`, and `samp`) to 1rem. It also updates autoprefixer and its sub-dependency of caniuse-lite to their latest versions.
+
 ### [Version 4.0.2](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.2)
 This patch no longer explicitly sets the root font-size to 16px, leaving it up to the browser's default and respecting the user's preference if set. It also updates some packages to their latest version.
 

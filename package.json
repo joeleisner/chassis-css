@@ -1,6 +1,6 @@
 {
   "name": "chassis-css",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "A minimalistic grid & typography CSS framework",
   "keywords": [
     "css",
@@ -32,7 +32,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.7.3",
+    "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-empty": "^0.1.2",

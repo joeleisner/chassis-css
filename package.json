@@ -1,6 +1,6 @@
 {
   "name": "chassis-css",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "A minimalistic grid & typography CSS framework",
   "keywords": [
     "css",
@@ -16,7 +16,7 @@
   "unpkg": "dist/css/chassis.min.css",
   "style": "dist/css/chassis.min.css",
   "repository": "https://github.com/joeleisner/chassis-css",
-  "homepage": "http://joeleisner.com/chassis/",
+  "homepage": "https://chassis.joeleisner.com",
   "author": "Joel Eisner <jeisner93@gmail.com>",
   "scripts": {
     "build": "npx gulp build",
@@ -32,7 +32,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-empty": "^0.1.2",

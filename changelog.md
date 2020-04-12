@@ -2,6 +2,9 @@
 
 ## Current releases
 
+### [Version 4.0.4](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.4)
+This patch updates `autoprefixer` to its latest version, fixes security vulnerabilities with the development dependencies, and simplifies the header used within the output files.
+
 ### [Version 4.0.3](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.3)
 This patch explicitly sets the font-size of code elements (`pre`, `code`, `kbd`, and `samp`) to 1rem. It also updates autoprefixer and its sub-dependency of caniuse-lite to their latest versions.
 

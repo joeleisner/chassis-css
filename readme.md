@@ -5,6 +5,9 @@ A minimalistic grid & typography CSS framework. Check out the comprehensive guid
 
 ## Changelog
 
+### [Version 4.0.5](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.5)
+This patch updates `autoprefixer` and `gulp-sass` to their latest versions, fixes security vulnerabilities with development dependencies, and simplifies the Gulp tasks and NPM scripts to make maintenance and development easier.
+
 ### [Version 4.0.4](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.4)
 This patch updates `autoprefixer` to its latest version, fixes security vulnerabilities with the development dependencies, and simplifies the header used within the output files.
 
@@ -56,26 +59,13 @@ npm i
 
 ## Development
 ```shell
-# npm run * / npx gulp *
-# *:exp = expanded, *:min = minified
-
-# Build all (CSS & SASS) assets
+# Build all production/development assets (CSS & SASS)
 npm run build
-npm run build:exp
-npm run build:min
 
-# Build CSS assets
-npm run compile
-npm run compile:exp
-npm run compile:min
-
-# Build SASS assets
-npm run package
-
-# Build all (CSS & SASS) assets while watching for changes
-npm run watch
-npm run watch:exp
-npm run watch:min
+# Watch for changes and build development CSS
+npm run develop
+npm run dev
+npm run start
 ```
 
 ## Author

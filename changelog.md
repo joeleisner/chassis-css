@@ -2,6 +2,9 @@
 
 ## Current releases
 
+### [Version 4.0.5](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.5)
+This patch updates `autoprefixer` and `gulp-sass` to their latest versions, fixes security vulnerabilities with development dependencies, and simplifies the Gulp tasks and NPM scripts to make maintenance and development easier.
+
 ### [Version 4.0.4](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.4)
 This patch updates `autoprefixer` to its latest version, fixes security vulnerabilities with the development dependencies, and simplifies the header used within the output files.
 

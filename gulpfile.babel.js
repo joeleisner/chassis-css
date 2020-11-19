@@ -7,6 +7,9 @@ import pkg          from './package.json';
 import postcss      from 'gulp-postcss';
 import rename       from 'gulp-rename';
 import transpile    from 'gulp-sass';
+import sassCompiler from 'sass';
+
+transpile.compiler = sassCompiler;
 
 const { NODE_ENV = 'development' } = process.env;
 

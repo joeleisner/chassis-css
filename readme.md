@@ -5,6 +5,9 @@ A minimalistic grid & typography CSS framework. Check out the comprehensive guid
 
 ## Changelog
 
+### [Version 4.0.6](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.6)
+This patch updates all dependencies to their latest versions, fixes security vulnerabilities with development dependencies, and swaps out the NodeSass compiler used by `gulp-sass` with DartSass (as NodeSass has been deprecated).
+
 ### [Version 4.0.5](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.5)
 This patch updates `autoprefixer` and `gulp-sass` to their latest versions, fixes security vulnerabilities with development dependencies, and simplifies the Gulp tasks and NPM scripts to make maintenance and development easier.
 

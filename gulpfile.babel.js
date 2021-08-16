@@ -2,14 +2,14 @@ import autoprefixer from 'autoprefixer';
 import cssnano      from 'cssnano';
 import filter       from 'gulp-filter';
 import gulp         from 'gulp';
+import gulpSass     from 'gulp-sass';
 import header       from 'gulp-header';
 import pkg          from './package.json';
 import postcss      from 'gulp-postcss';
 import rename       from 'gulp-rename';
-import transpile    from 'gulp-sass';
 import sassCompiler from 'sass';
 
-transpile.compiler = sassCompiler;
+const transpile = gulpSass(sassCompiler);
 
 const { NODE_ENV = 'development' } = process.env;
 

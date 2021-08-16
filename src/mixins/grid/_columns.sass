@@ -1,9 +1,11 @@
 // Mixins - Grid - Columns
 
+@use "sass:math"
+
 // Calculate column width rules
 =column-width($num)
-    flex: 0 0 ($num / $column-count) * 100%
-    max-width: ($num / $column-count) * 100%
+    flex: 0 0 math.div($num, $column-count) * 100%
+    max-width: math.div($num, $column-count) * 100%
 
 // Generate column classes
 =column-classes($breakpoint)

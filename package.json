@@ -36,6 +36,7 @@
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
+    "postcss": "^8.3.11",
     "sass": "^1.29.0"
   },
   "files": [

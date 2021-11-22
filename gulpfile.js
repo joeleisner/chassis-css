@@ -1,5 +1,3 @@
-import autoprefixer from 'autoprefixer';
-import cssnano from 'cssnano';
 import filter from 'gulp-filter';
 import fs from 'fs';
 import gulp from 'gulp';
@@ -18,9 +16,7 @@ export function css() {
     // Grab the package information
     const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-    // Initialize the processors,...
-    let processors = [ autoprefixer ];
-    // ... the banner,...
+    // Initialize the banner...
     let banner = '/*! <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %> */';
     // ... and rename options
     let options = {};
@@ -31,13 +27,12 @@ export function css() {
             banner += '\n\n'; // Provide additional spacing below the banner on development CSS
             break;
         case 'production':
-            processors.push(cssnano); // Use CSS Nano on production CSS
             options.suffix = '.min';  // Add the ".min" suffix to the production CSS file name
     }
 
     return gulp.src('src/*.sass')
         .pipe(transpile())             // Transpile the SASS to CSS
-        .pipe(postcss(processors))     // Process the CSS with PostCSS
+        .pipe(postcss())               // Process the CSS with PostCSS
         .pipe(header(banner, { pkg })) // Add a header to the CSS
         .pipe(rename(options))         // Rename the CSS file
         .pipe(gulp.dest('dist/css'));  // Move the CSS to the correct location

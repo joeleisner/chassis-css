@@ -23,7 +23,8 @@
     "build": "NODE_ENV=production npx gulp build && NODE_ENV=development npx gulp build",
     "develop": "NODE_ENV=development npx gulp develop",
     "dev": "npm run develop",
-    "start": "npm run develop"
+    "start": "npm run develop",
+    "prepublishOnly": "rm -rf dist && npm run build"
   },
   "license": "MIT",
   "devDependencies": {

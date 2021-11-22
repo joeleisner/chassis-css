@@ -1,6 +1,7 @@
 {
+  "type": "module",
   "name": "chassis-css",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "description": "A minimalistic grid & typography CSS framework",
   "keywords": [
     "css",
@@ -22,13 +23,11 @@
     "build": "NODE_ENV=production npx gulp build && NODE_ENV=development npx gulp build",
     "develop": "NODE_ENV=development npx gulp develop",
     "dev": "npm run develop",
-    "start": "npm run develop"
+    "start": "npm run develop",
+    "prepublishOnly": "rm -rf dist && npm run build"
   },
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@babel/register": "^7.12.1",
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.7",
     "gulp": "^4.0.2",
@@ -37,6 +36,7 @@
     "gulp-postcss": "^9.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
+    "postcss": "^8.3.11",
     "sass": "^1.29.0"
   },
   "files": [
@@ -45,5 +45,9 @@
     "license",
     "readme.md"
   ],
-  "browserslist": "last 2 versions and > 0% and not dead"
+  "browserslist": [
+    "last 2 versions and > 0% and not dead",
+    "not Explorer <= 11",
+    "not ExplorerMobile 11"
+  ]
 }

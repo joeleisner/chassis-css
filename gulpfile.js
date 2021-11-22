@@ -1,12 +1,12 @@
 import autoprefixer from 'autoprefixer';
-import cssnano      from 'cssnano';
-import filter       from 'gulp-filter';
-import gulp         from 'gulp';
-import gulpSass     from 'gulp-sass';
-import header       from 'gulp-header';
-import pkg          from './package.json';
-import postcss      from 'gulp-postcss';
-import rename       from 'gulp-rename';
+import cssnano from 'cssnano';
+import filter from 'gulp-filter';
+import fs from 'fs';
+import gulp from 'gulp';
+import gulpSass from 'gulp-sass';
+import header from 'gulp-header';
+import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
 import sassCompiler from 'sass';
 
 const transpile = gulpSass(sassCompiler);
@@ -15,6 +15,9 @@ const { NODE_ENV = 'development' } = process.env;
 
 // Compile the SASS to CSS
 export function css() {
+    // Grab the package information
+    const pkg = JSON.parse(fs.readFileSync('./package.json'));
+
     // Initialize the processors,...
     let processors = [ autoprefixer ];
     // ... the banner,...

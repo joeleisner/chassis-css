@@ -43,5 +43,9 @@
     "license",
     "readme.md"
   ],
-  "browserslist": "last 2 versions and > 0% and not dead"
+  "browserslist": [
+    "last 2 versions and > 0% and not dead",
+    "not Explorer <= 11",
+    "not ExplorerMobile 11"
+  ]
 }

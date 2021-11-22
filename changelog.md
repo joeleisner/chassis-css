@@ -2,6 +2,9 @@
 
 ## Current releases
 
+### [Version 4.0.8](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.8)
+This patch switches the package to ESM, drops IE support, updates all dependencies to their latest versions, and reorganizes the build system to be more maintainable.
+
 ### [Version 4.0.7](https://github.com/joeleisner/chassis-css/releases/tag/v4.0.7)
 This patch updates all dependencies to their latest versions and replaces all SASS slash as division operations to `math.div(...)` due to future deprecation.
 

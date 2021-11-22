@@ -14,14 +14,14 @@ const transpile = gulpSass(sassCompiler);
 const { NODE_ENV = 'development' } = process.env;
 
 // Generates a banner to attach to the top of a file
-export function banner() {
+export function banner(spacing = false) {
     // Grab the package information
     const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
     // Define the banner template...
     let template = '/*! <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %> */';
     // ... and if in development, add extra space to the bottom of it
-    if (NODE_ENV === 'development') template += '\n\n';
+    if (NODE_ENV === 'development' || spacing) template += '\n\n';
 
     // Finally, generate the banner
     return header(template, { pkg });
@@ -50,7 +50,8 @@ export function sass() {
     // For each file in the source directory...
     return gulp.src('src/**/*')
         .pipe(mainFile) // If currently processing the main file,...
-        .pipe(rename({ prefix: '_' })) // ... prefix its file name with "_"
+        .pipe(rename({ prefix: '_' })) // ... prefix its file name with "_"...
+        .pipe(banner(true)) // ... and give it a banner
         .pipe(mainFile.restore)
         .pipe(gulp.dest('dist/sass')); // Copy the files to the correct location
 };

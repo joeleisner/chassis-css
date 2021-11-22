@@ -7,35 +7,39 @@ import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
 import sassCompiler from 'sass';
 
+// Set the SASS compiler
 const transpile = gulpSass(sassCompiler);
 
+// Grab the Node environment variable
 const { NODE_ENV = 'development' } = process.env;
 
-// Compile the SASS to CSS
-export function css() {
+// Generates a banner to attach to the top of a file
+export function banner() {
     // Grab the package information
     const pkg = JSON.parse(fs.readFileSync('./package.json'));
 
-    // Initialize the banner...
-    let banner = '/*! <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %> */';
-    // ... and rename options
-    let options = {};
+    // Define the banner template...
+    let template = '/*! <%= pkg.name %> <%= pkg.version %> | <%= pkg.license %> License | <%= pkg.homepage %> */';
+    // ... and if in development, add extra space to the bottom of it
+    if (NODE_ENV === 'development') template += '\n\n';
 
-    // Depending on what type of assets are being built, change the initial variables
-    switch (NODE_ENV) {
-        case 'development':
-            banner += '\n\n'; // Provide additional spacing below the banner on development CSS
-            break;
-        case 'production':
-            options.suffix = '.min';  // Add the ".min" suffix to the production CSS file name
-    }
+    // Finally, generate the banner
+    return header(template, { pkg });
+}
+
+// Compile the SASS to CSS
+export function css() {
+    // Initialize rename options...
+    let renameOptions = {};
+    // ... and if in production, add a `.min` suffix to it
+    if (NODE_ENV === 'production') renameOptions.suffix = '.min';
 
     return gulp.src('src/*.sass')
-        .pipe(transpile())             // Transpile the SASS to CSS
-        .pipe(postcss())               // Process the CSS with PostCSS
-        .pipe(header(banner, { pkg })) // Add a header to the CSS
-        .pipe(rename(options))         // Rename the CSS file
-        .pipe(gulp.dest('dist/css'));  // Move the CSS to the correct location
+        .pipe(transpile().on('error', transpile.logError)) // Transpile the SASS to CSS
+        .pipe(postcss()) // Process the CSS with PostCSS
+        .pipe(banner()) // Add a header to the CSS
+        .pipe(rename(renameOptions)) // Rename the CSS file
+        .pipe(gulp.dest('dist/css')); // Move the CSS to the correct location
 };
 
 // Package the SASS to be reusable
@@ -45,14 +49,19 @@ export function sass() {
 
     // For each file in the source directory...
     return gulp.src('src/**/*')
-        .pipe(mainFile)                // If currently processing the main file,...
+        .pipe(mainFile) // If currently processing the main file,...
         .pipe(rename({ prefix: '_' })) // ... prefix its file name with "_"
         .pipe(mainFile.restore)
         .pipe(gulp.dest('dist/sass')); // Copy the files to the correct location
 };
 
 // Build all assets (CSS and SASS)
-export const build = gulp.series(gulp.parallel(css, sass));
+export const build = gulp.parallel(css, sass);
 
 // Watch for changes and build CSS
-export const develop = () => gulp.watch('src/**/*', css);
+export function watch() {
+    gulp.watch('src/**/*', css);
+}
+
+// Build all development assets (CSS)
+export const develop = gulp.series(css, watch);
